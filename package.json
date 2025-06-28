@@ -2,7 +2,7 @@
   "name": "https://little-house-in-the-valleys.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://little-house-in-the-valleys.com",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
