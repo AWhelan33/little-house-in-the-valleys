@@ -83,7 +83,7 @@ function App() {
                 {(() => {
                     switch (currentPage) {
                         case 'home':
-                            return <HomePage />;
+                            return <HomePage navigate={navigate} />;
                         case 'books':
                             return <BooksPage />;
                         case 'videos':
@@ -142,45 +142,41 @@ const ButtonLink = ({ page, currentPage, navigate, children }) => (
 );
 
 // Home Page Component - white card on the dark blue background
-const HomePage = () => (
+const HomePage = ({ navigate }) => (
     <section className="bg-white p-8 rounded-2xl shadow-xl mb-12 text-center overflow-hidden">
         {/* Hero Section */}
         <div className="relative w-full h-96 md:h-[500px] overflow-hidden rounded-xl shadow-lg">
             <img
-                src="https://placehold.co/1200x500/A0E7E5/A0E7E5" // Image with solid background, no text
-                alt="Hero image with children's book theme"
+                src="/images/hero.jpg"// Image with solid background, no text
+                alt="Image of a dog with the six bells miners memorial alongside with hills behind"
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/1200x500/AD90FF/AD90FF"; }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center p-4 rounded-xl">
                 <h2 className="text-4xl md:text-7xl font-amatic font-bold text-white mb-4 drop-shadow-lg">
-                    Dive into a World of Imagination!
+                    Welcome to Little House In the Valleys!
                 </h2>
-                <p className="text-lg md:text-xl text-blue-50 max-w-3xl drop-shadow-md leading-relaxed">
-                    Discover magical tales, delightful characters, and adventures that sparkle with wonder.
-                    Perfect for young readers and their families.
-                </p>
             </div>
         </div>
 
         {/* Introduction Section - inner content is now blue-100 for text */}
         <div className="mt-28 max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md border border-blue-200">
             <h3 className="text-3xl md:text-4xl font-amatic font-bold text-teal-600 mb-6">
-                Hello & Welcome, Little Readers!
+                Hello & Welcome.
             </h3>
             <p className="text-lg leading-relaxed text-stone-700">
-                I'm Amii Whelan, an author who loves to create stories that whisk you away to amazing places.
-                Here, you can explore my wonderful children's books, watch fun videos, see lovely pictures,
-                and soon, read exciting new blog posts and even a story that unfolds page by page!
+                We are Amii, Avid and Doris (the dog) and we live in South Wales, UK. On this site you will find information on our children's books - The Doris books series all about our collie Doris and her adventures in the valleys, various artworks by graphic artist Avid Dafydd, writings and blog posts by Amii along with videos of our many eclectic adventures.
+                Coming soon we will also be launching the serialization of our Doris adventures. A place to get a weekly dose of Doris fun.
+
             </p>
             <p className="text-md mt-4 leading-relaxed text-stone-600">
-                My biggest wish is to help every child discover the joy of reading and let their imaginations soar.
+                Come and join us on our adventures by book, art, writing, photo and video as we explore the South Wales valleys and beyond.
             </p>
             <a
-                href="#books-section"
+                onClick={() => navigate('books')}
                 className="mt-8 inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold font-amatic tracking-wider text-xl py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
             >
-                Explore My Books
+                Explore our books
             </a>
         </div>
     </section>
@@ -190,26 +186,38 @@ const HomePage = () => (
 const BooksPage = () => (
     <section id="books-section" className="bg-white p-8 rounded-2xl shadow-xl">
         <h2 className="text-3xl md:text-5xl font-amatic font-bold text-teal-600 mb-8 text-center">
-            My Wonderful Children's Books
+            The Doris Book Series
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <BookCard
-                title="The Magical Treehouse Adventure"
-                description="Join Lily and Tom as they discover a treehouse that takes them to fantastical lands! A tale of friendship and discovery."
-                coverSrc="https://placehold.co/250x350/9F7AEA/ffffff?text=Book+Cover+1"
-                amazonLink="https://www.amazon.com/your-book-link-1"
+                title="Doris and the Dragon"
+                description="Join Doris on her first adventure through the valley, where the grass is green and the soil is black, as she meets a surprising friend."
+                coverSrc="/images/dragon_bookcover.png"
+                amazonLink="https://amzn.eu/d/b1yyFTU"
             />
             <BookCard
-                title="Piffle the Dragon's Big Secret"
-                description="Piffle is a shy dragon with a secret talent. Can his friends help him share it with the world?"
-                coverSrc="https://placehold.co/250x350/FBBF24/ffffff?text=Book+Cover+2"
-                amazonLink="https://www.amazon.com/your-book-link-2"
+                title="Doris and the Pirate"
+                description="Join Doris on her second adventure where she helps a new friend follow their dreams."
+                coverSrc="/images/pirate_cover.jpg"
+                amazonLink="https://amzn.eu/d/hJHXBBs"
             />
             <BookCard
-                title="The Whispering Woods Mystery"
-                description="When strange noises come from the woods, Mia and her dog embark on an exciting journey to solve the mystery."
-                coverSrc="https://placehold.co/250x350/4DD0E1/ffffff?text=Book+Cover+3"
-                amazonLink="https://www.amazon.com/your-book-link-3"
+                title="Doris saves Christmas"
+                description="Snow has fallen on the valley, Christmas is coming and the post van has broken down. All of the letters to Santa are stuck. Can Doris save the day and deliver the letters to Santa in time to save Christmas?"
+                coverSrc="/images/savesChristmas_cover.jpg"
+                amazonLink="https://amzn.eu/d/aGlsG93"
+            />
+            <BookCard
+                title="Doris and the Christmas jumper caper"
+                description="Mother Christmas is in a bind. She’s run out of wool and there are jumpers to be knitted. There’s only one animal who can help save the day. Join Doris on her latest quest to find the rare red wool in time for Christmas."
+                coverSrc="/images/christmasJumper_cover.jpg"
+                amazonLink="https://amzn.eu/d/1t0YDqF"
+            />
+            <BookCard
+                title="Doris and the Daffodils"
+                description="Deep in the Valleys where the grass is green, the daffodils have gone missing. With the memorial only hours away can Doris find them in time! Join Doris on her fifth adventure in the valleys as she goes in search of the missing daffodils."
+                coverSrc="/images/daffodils_cover.jpg"
+                amazonLink="https://amzn.eu/d/cscCS9a"
             />
         </div>
     </section>
