@@ -253,14 +253,19 @@ const VideosPage = () => (
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoCard
-                title="Book Reading: The Magical Treehouse Adventure"
-                youtubeId="your_youtube_video_id_1"
-                description="Listen to me read the first chapter of 'The Magical Treehouse Adventure'!"
+                title="Rhigos Mountain motorbike ride"
+                youtubeId="BjHucvvSI5U"
+                description="Join Avid on a ride over the Rhigos Mountains, Rhondda Valley, South Wales."
             />
             <VideoCard
-                title="Interview: My Writing Process"
-                youtubeId="your_youtube_video_id_2"
-                description="A short interview where I discuss my inspirations and how I bring stories to life."
+                title="Aneurin Bevan memorial and Cefn Golau Cemetery motorbike ride"
+                youtubeId="eCr2SiVOKOM"
+                description="A motorbike ride to Aneurin Bevan Memorial stones and Cefn Golau Cholera Cemetery, Tredegar, South Wales."
+            />
+            <VideoCard
+                title="Talybont Reservoir motorbike ride"
+                youtubeId="Kie7d-uxR5c"
+                description="Join Avid on a ride around Talybont Reservoir, South Wales."
             />
         </div>
     </section>
@@ -292,24 +297,14 @@ const PhotosPage = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <PhotoCard
-                src="https://placehold.co/400x300/F0ECCB/6B6B6B?text=Reading+Event"
-                alt="Amii Whelan at a reading event"
-                caption="A fun reading event with young readers!"
+                src="/images/bigPit.jpg"
+                alt="Big pit mine"
+                caption="A photo of the big pit Blaenavon South Wales"
             />
             <PhotoCard
-                src="https://placehold.co/400x300/C5E0D8/6B6B6B?text=Writing+Nook"
-                alt="Amii Whelan's writing desk"
-                caption="My cozy writing nook where ideas come to life."
-            />
-            <PhotoCard
-                src="https://placehold.co/400x300/E8F5E9/6B6B6B?text=Book+Signing"
-                alt="Amii Whelan at a book signing"
-                caption="Meeting wonderful readers at a book signing event."
-            />
-            <PhotoCard
-                src="https://placehold.co/400x300/B2EBF2/6B6B6B?text=Inspiration+Walk"
-                alt="Amii Whelan finding inspiration in nature"
-                caption="Finding inspiration in nature for new stories."
+                src="/images/stIlltyd.jpg"
+                alt="St Illtyd Church Blaenau Gwent"
+                caption="St Illtyd Church Blaenau Gwent on a sunny June Day in 2025"
             />
         </div>
     </section>
@@ -335,18 +330,17 @@ const BlogPage = () => (
             My Creative Corner Blog
         </h2>
         <p className="text-lg mb-6 leading-relaxed text-blue-800">
-            Welcome to my blog! Here I'll share updates on my writing journey, behind-the-scenes glimpses into my books,
-            and thoughts on children's literature, imagination, and the joy of reading.
+            Welcome to my blog! Here I'll share updates and musings on all kinds of things writing, adventures, gardening, cooking and general day to day life.
         </p>
         <p className="text-md leading-relaxed text-blue-700">
             Stay tuned for inspiring stories and new posts coming soon!
         </p>
         <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200 shadow-inner">
             <h3 className="text-xl font-semibold text-teal-600 mb-3 font-amatic tracking-wide">
-                Coming Soon: "The Inspiration Behind 'The Magical Treehouse Adventure'"
+                Coming Soon: "Summer 2025 and getting the website back up and running"
             </h3>
             <p className="leading-relaxed text-stone-700">
-                A deep dive into the initial spark, characters, and world-building that brought my first book to life.
+                My ramblings on summer so far, what's been going on and updating the website along with our plans for this page going forward.
             </p>
             <p className="text-sm mt-2 text-stone-500">
                 (Expected: Summer 2025)
@@ -359,22 +353,27 @@ const BlogPage = () => (
 const SerializationPage = () => (
     <section className="bg-white p-8 rounded-2xl shadow-xl text-center">
         <h2 className="text-3xl md:text-5xl font-amatic font-bold text-teal-600 mb-8 text-center">
-            Daily Story Adventure: The Serialization
+            Weekly Story Adventures of Doris
         </h2>
         <p className="text-lg mb-6 leading-relaxed text-blue-800">
-            Get ready for an exciting new way to read my stories! In this section, I'll be releasing a new page
-            of a book every day, allowing you to follow along as the story unfolds, building suspense and anticipation.
+            Get ready for an exciting new way to read some of the Doris stories! In this section, we'll be releasing a new page
+            of a book every week, allowing you to follow along as the story unfolds. To get things started we'll be doing an extended version of Doris and the Pirate.
         </p>
         <p className="text-md leading-relaxed text-blue-700">
-            This interactive reading experience is currently under magical construction. Check back soon for the very first installment!
+            Remember the days when newspapers used to have a picture story that ran daily for children? Rupert the Bear is one example and the inspiration behind our serialization. We're planning to bring you Doris in a serialized way with a page or two every week but here online and on instagram. This experience is currently under magical construction. Check back in Early September for the very first installment!
         </p>
         <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200 shadow-inner">
             <h3 className="text-xl font-semibold text-teal-600 mb-3 font-amatic tracking-wide">
-                Upcoming Serialization: "The Mystery of the Missing Starlight"
+                Upcoming Serialization: "Doris and the Pirate"
             </h3>
             <p className="leading-relaxed text-stone-700">
-                A brand new adventure filled with wonder, secrets, and a dash of starlight, revealed one page at a time.
+                An extended version of Doris and the Pirate bringing our fun filled seaside adventure to you in a longer serialized version. Starting in September look out for a page or two each week and join Doris on her piratey adventure.
             </p>
+            <img
+                src="/images/dorisPirateFlag.jpg" // <--- REPLACE 'your-image-name.jpg' with your actual image file name
+                alt="Doris and the Pirate upcoming serialization cover" // <--- Provide a descriptive alt text for accessibility
+                className="mt-6 mb-4 max-w-sm mx-auto rounded-lg shadow-md" // Tailwind CSS for styling: margin-top, margin-bottom, max-width, center, rounded corners, shadow
+            />
             <p className="text-sm mt-2 text-stone-500">
                 (First page expected: Autumn 2025)
             </p>
