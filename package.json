@@ -2,7 +2,7 @@
   "name": "little-house-in-the-valleys",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AWhelan33.github.io/little-house-in-the-valleys/",
+  "homepage": "https://little-house-in-the-valleys/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
